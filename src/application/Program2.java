@@ -20,8 +20,12 @@ public class Program2 {
 
 
         System.out.println("=== TEST 2: department update ====");
-        newDepartment.setName("Volleyball");
+        newDepartment.setName("hockey");
         departmentDao.update(newDepartment);
         System.out.println("Update completed!");
+
+        System.out.println("=== TEST 3: department delete ====");
+        departmentDao.deleteById(5);
+        System.out.println("Delete completed!");
     }
 }
