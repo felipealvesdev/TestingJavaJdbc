@@ -4,6 +4,7 @@ import model.dao.DaoFactory;
 import model.dao.DepartmentDao;
 import model.entities.Department;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Program2 {
@@ -19,20 +20,24 @@ public class Program2 {
         System.out.println("Inserted! New id = " + newDepartment.getId());
 
 /*
-        System.out.println("=== TEST 2: department update ====");
+        System.out.println("\n=== TEST 2: department update ====");
         newDepartment.setName("hockey");
         departmentDao.update(newDepartment);
         System.out.println("Update completed!");
 
-        System.out.println("=== TEST 3: department delete ====");
+        System.out.println("\n=== TEST 3: department delete ====");
         departmentDao.deleteById(5);
         System.out.println("Delete completed!");
 */
 
-        System.out.println("=== TEST 4: department findById ====");
+        System.out.println("\n=== TEST 4: department findById ====");
         newDepartment = departmentDao.findById(2);
         System.out.println(newDepartment);
 
-
+        System.out.println("\n=== TEST 5: department findAll ====");
+        List<Department> list = departmentDao.findAll();
+        for(Department obj : list) {
+            System.out.println(obj);
+        }
     }
 }
