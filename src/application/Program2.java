@@ -18,7 +18,7 @@ public class Program2 {
         System.out.println("Previous name was: " + newDepartment.getName());
         System.out.println("Inserted! New id = " + newDepartment.getId());
 
-
+/*
         System.out.println("=== TEST 2: department update ====");
         newDepartment.setName("hockey");
         departmentDao.update(newDepartment);
@@ -27,5 +27,12 @@ public class Program2 {
         System.out.println("=== TEST 3: department delete ====");
         departmentDao.deleteById(5);
         System.out.println("Delete completed!");
+*/
+
+        System.out.println("=== TEST 4: department findById ====");
+        newDepartment = departmentDao.findById(2);
+        System.out.println(newDepartment);
+
+
     }
 }
